@@ -22,14 +22,14 @@ int main()
             }
             else
             {
-                printf("%d\n", length_word);
+                //printf("%d\n", length_word);
                 ++words[length_word - 1];
             }
 
             length_word = 0;
         }
     }
-
+    ++words[length_word - 1];
     for(int i = 0; i < MAX_COUNT_SYMBOLS + 1; ++i)
     {
         if(words[i] > max_count_word)
@@ -41,17 +41,15 @@ int main()
         for(int j = 0; j < MAX_COUNT_SYMBOLS + 1; ++j)
         {
 
-            if(words[j] > 0)
+            if(words[j] >= (max_count_word - i ))
             {
-                if(words[j] >= (max_count_word - i ))
-                {
-                    printf("%c %d%d%d", '*', i , j, words[j]);
-                }
+                printf("%c ", '*');
             }
             else
             {
                 printf("%c ", ' ');
             }
+          
         }
         printf("%c", '\n');
     }
