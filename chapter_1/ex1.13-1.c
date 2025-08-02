@@ -26,7 +26,8 @@ int main()
             length_word = 0;
         }
     }
-
+    ++words[length_word - 1];
+    
     for(int i = 0; i < MAX_COUNT_SYMBOLS + 1; ++i)
     {
         if(i == 20)
