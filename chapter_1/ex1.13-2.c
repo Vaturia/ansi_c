@@ -9,7 +9,7 @@ int main()
 
     while((c = getchar()) != EOF)
     {
-        if(c >= 'a' && c <= 'z') //&& c != ' ' && c != ',' && c != '.')
+        if(c != '\n' && c != '\t' && c != ' ' && c != ',' && c != '.') 
         {
             ++length_word;
 
@@ -22,7 +22,7 @@ int main()
             }
             else
             {
-                //printf("%d\n", length_word);
+
                 ++words[length_word - 1];
             }
 
@@ -64,6 +64,5 @@ int main()
             printf("%d ", i + 1);
     }
     printf("%c", '\n');
-    //printf("%d\n", words[11]);
-    //printf("MAx words %d\n", max_count_word);
+
 }
